@@ -1,0 +1,59 @@
+.burger
+    display: none
+    &_body
+        display: none
+.active
+    display: block !important
+.menu__ul_2
+    height: auto
+    // padding-top: 30px
+    // border: 1px solid #000
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    text-align: center
+    width: 100%
+.menu__li_2
+    padding: 20px
+.bf
+    font-size: 28px
+
+
+@media ( max-width: 1024px)
+    .menu
+        display: none
+    .nav
+        &_wrapp
+            width: auto
+        &_social
+            display: none
+    .burger
+        z-index: 5
+        display: block
+        position: relative
+        width: 30px
+        height: 18px
+        cursor: pointer
+        &::before, &::after, &__span 
+            left: 0
+            position: absolute
+            height: 10%
+            width: 100%
+            transition: all 0.3s ease 0s
+            background-color: #fff
+        &::before, &::after 
+            content: ""
+        &::before 
+            top: 0
+        &::after 
+            bottom: 0
+        &_body
+            transition: top .3s ease 0s
+
+        &__span 
+            top: 50%
+            transform: scale(1) translate(0px, -50%)
+        
+            
+            
+     

@@ -1,0 +1,74 @@
+.popup
+     
+    z-index: 10
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: #000000d6
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    &:target
+        opacity: 1
+        visibility: visible
+    &_body
+        min-height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 30px 10px
+    &_content
+        background-color: #D8DBE2
+        color: black    
+        max-width: 320px
+        height: auto
+        padding: 30px 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+
+.form
+    padding:  30px 26px
+    font-size: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 90%
+    &_title
+        font-family: Montserrat
+        font-style: normal
+        font-weight: bold
+        font-size: 27px
+        line-height: 22px
+        background: linear-gradient(45deg, rgba(55, 63, 81, 1) 33%, rgba(100, 115, 150, 1) 66%, #8AA9D6)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        margin: 0px 0px 1em 0px
+    &_input
+        margin: 10px
+.close
+    position: absolute
+    right: 18px 
+    top: 18px
+    font-size: 40px
+    &__a
+        color: black
+        &:hover
+            color: red
+.btn
+    margin-top: 30px
+    padding: 10px 30px
+    background: linear-gradient(45deg, rgba(55, 63, 81, 1) 33%, rgba(100, 115, 150, 1) 66%, #8AA9D6)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+@media ( max-width:  417px)
+    .popup_content 
+        max-width: 235px
+    .form
+        &_title
+            font-size: 20px
+        &_input
+            max-width: 90%
+
